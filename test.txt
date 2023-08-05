@@ -1,0 +1,138 @@
+
+Key Kubernetes cluster configurations every DevOps engineer should know - 
+Collaborating with security teams for architecture approval and compliance requirements -
+Comprehensive understanding of cluster configuration files and their locations 
+
+Kubernetes components use Mutual TLS for communication - 
+TLs certificates and private keys are stored in HC/kubernetes folder - 
+Control plane and worker nodes use the same certificates for authentication
+
+Managed Kubernetes clusters handle TLS requirements - 
+Providers manage control plane components and TLS certificates - 
+Self-hosted clusters require requesting certificates from organization's network or security team 
+
+Understanding HCD and Kubernetes API authentication - 
+Manifest file contains HCD configurations and service endpoint details - 
+Cubeconfig file is necessary for authentication to Kubernetes API server 
+
+Understanding the cubeconfig file and its usage in Kubernetes - 
+Cubeconfig file is used by end-users to access the API server to manage clusters - 
+Cubeconfig file is also used by respective components for API server authentication and authorization 
+
+Understanding the cubelet service file - 
+The cubelet service file contains three important configurations: 
+the cubeconfig file, the cubelet config.yaml file, and the manifest location. - 
+The cubelet EnV file contains the container runtime environment Linux socket and the pod infra container parameter. 
+
+Kubernetes DNS handles internal and external queries - 
+DNS queries are handled by the core DNS add-on component - 
+Configurations for core DNS are stored in a config map named core DNS in the cube system namespace 
+
+Custom DNS servers can be added to core DNS config map - 
+Internal Kubernetes DNS queries are forwarded to HC/resolve.com - 
+Other important cluster configurations include audit logging, RBAC, and container image security
+
+-----------------------------------------------------------------------
+
+Disable Secure Boot in UEFI:
+Secure Boot is a security feature that prevents unauthorized software from running during the startup process.
+This feature can sometimes interfere with the proper functioning of graphics card drivers, 
+especially if they are not signed by Microsoft. Disabling Secure Boot allows your system to boot with unsigned drivers,
+potentially resolving issues with your Nvidia graphics card.
+
+a. To disable Secure Boot, restart your computer and press the designated key to enter the UEFI/BIOS settings. 
+This key varies depending on your device's manufacturer, but it is usually F2, F10, or DEL. 
+Look for a prompt on the screen or check your computer's documentation for the specific key.
+
+b. Once you have accessed the UEFI/BIOS settings, navigate to the "Boot" or "Security" tab.
+
+c. Locate the "Secure Boot" option and change its status to "Disabled."
+
+d. Save your changes and exit the UEFI/BIOS settings. Your computer will restart and proceed to boot up normally.
+
+Install the recommended Nvidia drivers:
+Installing the recommended Nvidia drivers ensures that your graphics card has the most up-to-date and stable drivers available. 
+This can help resolve any compatibility or performance issues you may be experiencing.
+
+a. In your operating system, open the "Software & Updates" application.
+
+b. Click on the "Additional Drivers" tab, which displays a list of available drivers for your system's hardware components.
+
+c. Among the drivers listed, select the recommended Nvidia driver. This driver is typically marked as "tested" or "proprietary," 
+indicating that it has been tested for compatibility and stability with your system.
+
+d. Click "Apply Changes" to begin the driver installation process. This may take a few minutes to complete.
+
+e. Once the installation is finished, restart your computer to ensure the new driver is properly loaded and active.
+
+Update your UEFI (optional, but highly recommended):
+UEFI (Unified Extensible Firmware Interface) is a modern replacement for BIOS 
+its responsible for the initial startup and hardware configuration of your computer. 
+Updating your UEFI can resolve compatibility issues with your graphics card 
+and improve the overall stability and performance of your system.
+
+a. To update your UEFI, first visit your motherboard manufacturer's website and search for your specific motherboard model. 
+The UEFI/BIOS update should be available on the product support or downloads page.
+
+b. Download the latest UEFI update and carefully follow the instructions provided by the manufacturer. 
+The update process may vary depending on your motherboard, 
+so it is crucial to read and follow the instructions precisely to avoid any potential issues.
+
+c. After the UEFI update is complete, restart your computer to ensure the new firmware is active.
+
+By following these steps, you can resolve any issues you may be experiencing with your Nvidia graphics card 
+and improve the overall performance and stability of your system.
+
+-----------------------------------------------------------------
+
+
+As a DevOps Engineer, you will be responsible for managing the development, deployment, and maintenance of software applications. Here are some common interview questions that may be asked during the interview process: 1. What is your experience with automation tools? 2. What is your experience with cloud environments such as AWS or Azure? 3. What is your experience with containerization tools such as Docker and Kubernetes? 4. How do you handle version control and continuous integration/continuous delivery (CI/CD) processes? 5. What is your experience with monitoring and logging tools? 6. How do you handle security and compliance in your DevOps processes? 7. Can you explain your experience with scripting languages such as Python and Bash? 8. How do you handle communication between development and operations teams? 9. What is your experience with infrastructure as code (IaC) tools such as Terraform? 10. Can you describe a time when you had to troubleshoot a complex issue in a production environment? These questions
+
+As a DevOps Engineer, your role involves managing various aspects of software development, deployment, and maintenance. Based on the information gathered from the internet, here are some simplified answers to the common interview questions:
+
+Automation tools experience: I have worked with tools like Jenkins, GitLab CI/CD, and Travis CI for automating build, testing, and deployment processes.
+
+Cloud environments experience: I have experience working with popular cloud platforms like Amazon Web Services (AWS) and Microsoft Azure for deploying, managing, and scaling applications.
+
+Containerization tools experience: I have used Docker for creating, deploying, and managing containers, and Kubernetes for orchestrating and managing containerized applications at scale.
+
+Version control and CI/CD processes: I have used Git for version control, which helps in tracking code changes and collaborating with other developers. CI/CD tools like Jenkins and GitLab CI/CD automate the build, test, and deployment processes, ensuring faster and more reliable releases.
+
+Monitoring and logging tools experience: I have worked with tools like Elastic Stack (ELK) and Grafana for monitoring application performance, logs, and system metrics.
+
+Security and compliance: I have implemented security best practices in DevOps processes, such as using secure coding practices, vulnerability scanning, and following compliance guidelines.
+
+Scripting languages experience: I have experience writing scripts in languages like Python and Bash, which helps in automating tasks and customizing the development and deployment processes.
+
+Communication between development and operations teams: As a DevOps Engineer, I foster a collaborative environment by sharing information, providing feedback, and working closely with both development and operations teams to achieve common goals.
+
+Infrastructure as Code (IaC) tools experience: I have used tools like Terraform for managing and provisioning infrastructure as code, which helps in automating the creation and management of infrastructure resources.
+
+Troubleshooting complex issues: I have dealt with complex issues in production environments by analyzing logs, monitoring data, and collaborating with team members to identify and resolve problems efficiently.
+
+These answers provide an overview of my experience and knowledge in the various aspects of the DevOps role, showcasing my ability to manage software development, deployment, and maintenance processes effectively.
+
+-----------------------------------------
+
+
+comparison of popular REST API frameworks for Go development:
+
+Gin - A lightweight framework with fast performance and easy-to-use routing capabilities. 
+It also has a built-in middleware system for handling common tasks like logging and error handling.
+
+Echo - A high-performance framework with a simple and intuitive API. It has features like middleware, 
+routing, and error handling built-in, making it easy to build robust APIs quickly.
+
+Chi - A lightweight and fast framework that offers a lot of flexibility in terms of routing and middleware. 
+It also has a built-in logger and support for HTTP/2.
+
+Beego - A full-featured framework with built-in support for ORM, caching, and session management. 
+It also has a built-in admin panel for managing your application.
+
+Gorilla - A toolkit for building web applications, including a router, middleware, 
+and a set of handlers for common tasks like authentication and CSRF protection. 
+It's not a full-fledged framework, but it's highly flexible and can be used to build custom solutions.
+
+Ultimately, the choice of framework comes down to personal preference and the specific needs of your project. 
+Each of these frameworks has its own strengths and weaknesses, 
+so it's important to evaluate them based on your project requirements and development style.
